@@ -1,0 +1,13 @@
+:host {
+    .inputs, .operations {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .inputs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .operations {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,11 @@
+<p>Result {{result}}</p>
+<div class="inputs">
+    <input #input1 type="number" placeholder="First Number" />
+    <input #input2 type="number" placeholder="Second Number" />
+</div>
+<div class="operations">
+    <button (click)="add(+input1.value, +input2.value)">Add</button>
+    <button (click)="subtract(+input1.value, +input2.value)">Subtract</button>
+    <button (click)="multiply(+input1.value, +input2.value)">Multiply</button>
+    <button (click)="divide(+input1.value, +input2.value)">Divide</button>
+</div>
