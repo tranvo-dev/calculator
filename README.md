@@ -6,4 +6,6 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 This project is aimed at honing Test Driven Development skills using Angular and Jest.
 
 ## Reference
-Mastering Angular Test-Driven Development: Build high-quality Angular apps with step-by-step instructions and practical examples written by Ezéchiel Amen AGBLA.
+**Mastering Angular Test-Driven Development: Build high-quality Angular apps with step-by-step instructions and practical examples** written by Ezéchiel Amen AGBLA.
+
+Angular Official Document: [Angular In-depth Testing Guide](https://angular.dev/guide/testing#).
