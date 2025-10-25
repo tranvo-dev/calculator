@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CalculatorService } from '../../core/services/calculator-service';
 
 @Component({
   selector: 'app-calculator',
@@ -8,28 +9,30 @@ import { Component } from '@angular/core';
 })
 export class Calculator {
   result!: number;
+  calculationService = inject(CalculatorService);
 
   ngOnInit() {
     this.result = 0;
   }
 
   add(arg0: number, arg1: number) {
-    this.result = arg0 + arg1;
+    this.result = this.calculationService.add(arg0, arg1);
   }
 
   subtract(arg0: number, arg1: number) {
-    this.result = arg0 - arg1;
+    this.result = this.calculationService.subtract(arg0, arg1);
   }
 
   multiply(arg0: number, arg1: number) {
-    this.result = arg0 * arg1;
+    this.result = this.calculationService.multiply(arg0, arg1);
   }
 
   divide(arg0: number, arg1: number) {
-    if(arg1 === 0) {
-      this.result = 0;
-      throw new Error('Cannot divide by zero');
+    try {
+      this.result = this.calculationService.divide(arg0, arg1);
+    } catch (error) {
+      this.result = Number.NaN;
+      throw error;
     }
-    this.result = arg0 / arg1;
   }
 }
